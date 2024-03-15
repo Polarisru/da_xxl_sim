@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="da58_test" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug DA58-S">
+				<Option output="bin/Debug/da58s_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/DebugSimplex/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DDEF_SINGLE" />
+					<Add option="-DDEF_DA58" />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,--Map=da58_test.map" />
+				</Linker>
+			</Target>
+			<Target title="Debug DA58-D">
+				<Option output="bin/Debug/da58d_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/DebugDuplex/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DDEF_DUPLEX" />
+					<Add option="-DDEF_DA58" />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,--Map=da58_test.map" />
+				</Linker>
+			</Target>
+			<Target title="Debug DA30-S">
+				<Option output="bin/Debug/da58s_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/DebugSimplex/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DDEF_SINGLE" />
+					<Add option="-DDEF_DA30" />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,--Map=da58_test.map" />
+				</Linker>
+			</Target>
+			<Target title="Debug DA30-D">
+				<Option output="bin/Debug/da58d_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/DebugDuplex/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DDEF_DUPLEX" />
+					<Add option="-DDEF_DA30" />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,--Map=da58_test.map" />
+				</Linker>
+			</Target>
+			<Target title="Debug DA30-D-P">
+				<Option output="bin/Debug/da58d_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/DebugDuplex/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DDEF_DUPLEX" />
+					<Add option="-DDEF_DA30" />
+					<Add option="-DDEF_PIPISTREL" />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,--Map=da58_test.map" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/da58_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DDEF_DUPLEX" />
+				</Compiler>
+				<Linker>
+					<Add option="-O2" />
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c99" />
+			<Add option="-DDEF_UNITTEST" />
+			<Add directory="cmocka" />
+			<Add directory="../fw/src" />
+			<Add directory="../fw/hal" />
+			<Add directory="../fw/drivers" />
+			<Add directory="../fw/test" />
+		</Compiler>
+		<Linker>
+			<Add library="m" />
+		</Linker>
+		<Unit filename="../fw/drivers/driver_flash.h" />
+		<Unit filename="../fw/hal/can_structs.h" />
+		<Unit filename="../fw/src/can_volz.h" />
+		<Unit filename="../fw/src/conversion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/conversion.h" />
+		<Unit filename="../fw/src/counters.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/counters.h" />
+		<Unit filename="../fw/src/crc16.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/crc16.h" />
+		<Unit filename="../fw/src/crc32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/crc32.h" />
+		<Unit filename="../fw/src/defines.h" />
+		<Unit filename="../fw/src/drv8320.h" />
+		<Unit filename="../fw/src/eeprom.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/eeprom.h" />
+		<Unit filename="../fw/src/global.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/global.h" />
+		<Unit filename="../fw/src/hall.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/hall.h" />
+		<Unit filename="../fw/src/hdc1080.h" />
+		<Unit filename="../fw/src/inetwork.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="Debug DA58-D" />
+			<Option target="Debug DA30-D" />
+			<Option target="Debug DA30-D-P" />
+		</Unit>
+		<Unit filename="../fw/src/inetwork.h" />
+		<Unit filename="../fw/src/logic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/logic.h" />
+		<Unit filename="../fw/src/magnet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/magnet.h" />
+		<Unit filename="../fw/src/monitor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/monitor.h" />
+		<Unit filename="../fw/src/motor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/motor.h" />
+		<Unit filename="../fw/src/mvs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/mvs.h" />
+		<Unit filename="../fw/src/notch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/notch.h" />
+		<Unit filename="../fw/src/parser_can.h" />
+		<Unit filename="../fw/src/parser_can_volz.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/parser_rs485.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/redundancy.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="Debug DA58-D" />
+			<Option target="Debug DA30-D" />
+			<Option target="Debug DA30-D-P" />
+		</Unit>
+		<Unit filename="../fw/src/redundancy.h" />
+		<Unit filename="../fw/src/rs485.h" />
+		<Unit filename="../fw/src/rtos.h" />
+		<Unit filename="../fw/src/timeouts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/timeouts.h" />
+		<Unit filename="../fw/src/utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/utils.h" />
+		<Unit filename="../fw/src/version.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/src/version.h" />
+		<Unit filename="../fw/src/voting.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="Debug DA58-D" />
+			<Option target="Debug DA30-D" />
+			<Option target="Debug DA30-D-P" />
+		</Unit>
+		<Unit filename="../fw/src/voting.h" />
+		<Unit filename="cmocka/cmocka.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmocka/cmocka.h" />
+		<Unit filename="da58_test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wrappers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wrappers.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

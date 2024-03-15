@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="new_servo_sim" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/new_servo_sim" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="winmm" />
+					<Add library="ws2_32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/new_servo_sim" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-DDEF_UNITTEST" />
+			<Add directory="FreeRTOS/portable" />
+			<Add directory="FreeRTOS-Plus-CLI" />
+			<Add directory="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/include" />
+			<Add directory="../fw/config" />
+			<Add directory="hw_sim" />
+			<Add directory="../fw/src" />
+		</Compiler>
+		<Unit filename="../fw/src/defines.h" />
+		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/croutine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/event_groups.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/stream_buffer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/tasks.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/timers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FreeRTOS-Plus-CLI/FreeRTOS_CLI.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FreeRTOS-Plus-CLI/FreeRTOS_CLI.h" />
+		<Unit filename="FreeRTOS/MemMang/heap_3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FreeRTOS/portable/port.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FreeRTOS/portable/portmacro.h" />
+		<Unit filename="hw_sim/led.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="hw_sim/led.h" />
+		<Unit filename="src/CLI-commands.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/UDPCommandServer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

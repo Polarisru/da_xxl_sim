@@ -1,0 +1,220 @@
+# depslib dependency file v1.0
+1687178101 source:c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\croutine.c
+	"FreeRTOS.h"
+	"task.h"
+	"croutine.h"
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\freertos.h
+	<stddef.h>
+	<stdint.h>
+	"FreeRTOSConfig.h"
+	"projdefs.h"
+	"portable.h"
+	<reent.h>
+
+1710419225 c:\work\1_github\new_servo\simulator\src\freertosconfig.h
+	<stdint.h>
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\projdefs.h
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\portable.h
+	"deprecated_definitions.h"
+	"portmacro.h"
+	"mpu_wrappers.h"
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\deprecated_definitions.h
+	"..\..\Source\portable\owatcom\16bitdos\pc\portmacro.h"
+	"..\..\Source\portable\owatcom\16bitdos\flsh186\portmacro.h"
+	"../portable/GCC/ATMega323/portmacro.h"
+	"../portable/IAR/ATMega323/portmacro.h"
+	"../../Source/portable/MPLAB/PIC24_dsPIC/portmacro.h"
+	"../../Source/portable/MPLAB/PIC24_dsPIC/portmacro.h"
+	"../../Source/portable/MPLAB/PIC18F/portmacro.h"
+	"../../Source/portable/MPLAB/PIC32MX/portmacro.h"
+	"libFreeRTOS/Include/portmacro.h"
+	"../../Source/portable/SDCC/Cygnal/portmacro.h"
+	"../../Source/portable/GCC/ARM7_LPC2000/portmacro.h"
+	"portmacro.h"
+	"../../Source/portable/GCC/ARM7_LPC23xx/portmacro.h"
+	"..\..\Source\portable\IAR\MSP430\portmacro.h"
+	"../../Source/portable/GCC/MSP430F449/portmacro.h"
+	"../../Source/portable/Rowley/MSP430F449/portmacro.h"
+	"..\..\Source\portable\RVDS\ARM7_LPC21xx\portmacro.h"
+	"../../Source/portable/GCC/ARM7_AT91SAM7S/portmacro.h"
+	"..\..\Source\portable\IAR\AtmelSAM7S64\portmacro.h"
+	"..\..\Source\portable\IAR\AtmelSAM9XE\portmacro.h"
+	"..\..\Source\portable\IAR\LPC2000\portmacro.h"
+	"..\..\Source\portable\IAR\STR71x\portmacro.h"
+	"..\..\Source\portable\IAR\STR75x\portmacro.h"
+	"..\..\Source\portable\GCC\STR75x\portmacro.h"
+	"..\..\Source\portable\IAR\STR91x\portmacro.h"
+	"../../Source/portable/GCC/H8S2329/portmacro.h"
+	"../../Source/portable/GCC/ARM7_AT91FR40008/portmacro.h"
+	"../../Source/portable/RVDS/ARM_CM3/portmacro.h"
+	"../../Source/portable/GCC/ARM_CM3/portmacro.h"
+	"../../Source/portable/GCC/ARM_CM3/portmacro.h"
+	"../../Source/portable/IAR/ARM_CM3/portmacro.h"
+	"../../Source/portable/IAR/ARM_CM3/portmacro.h"
+	"../../Source/portable/CodeWarrior/HCS12/portmacro.h"
+	"../../Source/portable/GCC/MicroBlaze/portmacro.h"
+	"..\..\Source\portable\Paradigm\Tern_EE\small\portmacro.h"
+	"../../Source/portable/GCC/HCS12/portmacro.h"
+	"../../Source/portable/GCC/MCF5235/portmacro.h"
+	"../../../Source/portable/GCC/ColdFire_V2/portmacro.h"
+	"../../Source/portable/CodeWarrior/ColdFire_V2/portmacro.h"
+	"../../Source/portable/GCC/PPC405_Xilinx/portmacro.h"
+	"../../Source/portable/GCC/PPC440_Xilinx/portmacro.h"
+	"..\..\Source\portable\Softune\MB96340\portmacro.h"
+	"frconfig.h"
+	"..\portable\BCC\16BitDOS\PC\prtmacro.h"
+	"frconfig.h"
+	"..\portable\BCC\16BitDOS\flsh186\prtmacro.h"
+	"portmacro.h"
+	"portmacro.h"
+	"portmacro.h"
+	"portmacro.h"
+	"../../Source/portable/IAR/V850ES/portmacro.h"
+	"../../Source/portable/IAR/V850ES/portmacro.h"
+	"../../Source/portable/IAR/V850ES/portmacro.h"
+	"../../Source/portable/IAR/V850ES/portmacro.h"
+	"../../Source/portable/IAR/V850ES/portmacro.h"
+	"../../Source/portable/IAR/78K0R/portmacro.h"
+	"../../Source/portable/IAR/78K0R/portmacro.h"
+
+1600805053 c:\work\1_github\new_servo\simulator\src\portmacro.h
+	<windows.h>
+	<winbase.h>
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\mpu_wrappers.h
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\task.h
+	"list.h"
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\list.h
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\croutine.h
+	"list.h"
+
+1687178101 source:c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\event_groups.c
+	<stdlib.h>
+	"FreeRTOS.h"
+	"task.h"
+	"timers.h"
+	"event_groups.h"
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\timers.h
+	"task.h"
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\event_groups.h
+	"timers.h"
+
+1687178101 source:c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\list.c
+	<stdlib.h>
+	"FreeRTOS.h"
+	"list.h"
+
+1687178101 source:c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\portable\memmang\heap_1.c
+	<stdlib.h>
+	"FreeRTOS.h"
+	"task.h"
+
+1687178101 source:c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\queue.c
+	<stdlib.h>
+	<string.h>
+	"FreeRTOS.h"
+	"task.h"
+	"queue.h"
+	"croutine.h"
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\queue.h
+
+1687178101 source:c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\stream_buffer.c
+	<stdint.h>
+	<string.h>
+	"FreeRTOS.h"
+	"task.h"
+	"stream_buffer.h"
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\stream_buffer.h
+
+1687178101 source:c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\tasks.c
+	<stdlib.h>
+	<string.h>
+	"FreeRTOS.h"
+	"task.h"
+	"timers.h"
+	"stack_macros.h"
+	<stdio.h>
+	"tasks_test_access_functions.h"
+	"freertos_tasks_c_additions.h"
+
+1687178101 c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\include\stack_macros.h
+
+1687178101 source:c:\work\1_github\new_servo\fw\thirdparty\freertos\freertosv10.0.0\source\timers.c
+	<stdlib.h>
+	"FreeRTOS.h"
+	"task.h"
+	"queue.h"
+	"timers.h"
+
+1600805053 source:c:\work\1_github\new_servo\simulator\src\port.c
+	<stdio.h>
+	"FreeRTOS.h"
+	"task.h"
+	"mmsystem.h"
+
+1710428108 source:c:\work\1_github\new_servo\simulator\src\main.c
+	<stdio.h>
+	<stdint.h>
+	<FreeRTOS.h>
+	"task.h"
+	"queue.h"
+
+1600804993 source:c:\work\1_github\new_servo\simulator\freertos-plus-cli\freertos_cli.c
+	<string.h>
+	<stdint.h>
+	"FreeRTOS.h"
+	"task.h"
+	"FreeRTOS_CLI.h"
+
+1600804993 c:\work\1_github\new_servo\simulator\freertos-plus-cli\freertos_cli.h
+
+1710421482 source:c:\work\1_github\new_servo\simulator\src\udpcommandserver.c
+	<WinSock2.h>
+	<stdio.h>
+	"FreeRTOS.h"
+	"task.h"
+	"FreeRTOS_CLI.h"
+
+1710421402 source:c:\work\1_github\new_servo\simulator\src\cli-commands.c
+	"FreeRTOS.h"
+	"task.h"
+	"queue.h"
+	"FreeRTOS_CLI.h"
+
+1600805053 source:c:\work\1_github\new_servo\simulator\memmang\heap_3.c
+	<stdlib.h>
+	"FreeRTOS.h"
+	"task.h"
+
+1710421280 c:\work\1_github\new_servo\fw\config\freertosconfig.h
+	<stdint.h>
+	<peripheral_clk_config.h>
+
+1687178099 c:\work\1_github\new_servo\fw\config\peripheral_clk_config.h
+
+1600805053 c:\work\1_github\new_servo\simulator\freertos\portable\portmacro.h
+	<windows.h>
+	<winbase.h>
+
+1600805053 source:c:\work\1_github\new_servo\simulator\freertos\memmang\heap_3.c
+	<stdlib.h>
+	"FreeRTOS.h"
+	"task.h"
+
+1600805053 source:c:\work\1_github\new_servo\simulator\freertos\portable\port.c
+	<stdio.h>
+	"FreeRTOS.h"
+	"task.h"
+	"mmsystem.h"
+

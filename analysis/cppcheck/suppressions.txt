@@ -1,0 +1,5 @@
+variableScope
+unusedStructMember
+unusedFunction
+ConfigurationNotChecked
+missingInclude
