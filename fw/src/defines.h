@@ -8,9 +8,11 @@
 #include <limits.h>
 
 /**< Platform-depended includes */
-#ifndef DEF_UNITTEST
+#ifndef DEF_SIM
   #include "samc21g18a.h"
   #include "err_codes.h"
+#else
+  #include <stdio.h>
 #endif
 
 #define MIN(a, b)   (((a) < (b)) ? (a) : (b))
@@ -324,15 +326,5 @@ enum {
 
 /**< Length of parameter's name */
 #define PARAM_NAME_LEN            6U
-
-/**< Empty wrappers for unit tests */
-#ifdef DEF_UNITTEST
-  #define pdTRUE                  true
-  #define vTaskDelay(x)
-  #define xSemaphoreTake(x, y)    pdTRUE
-  #define xSemaphoreGive(x)
-  #define pdMS_TO_TICKS(x)        x
-  #define xTaskGetTickCount()     0
-#endif
 
 #endif
