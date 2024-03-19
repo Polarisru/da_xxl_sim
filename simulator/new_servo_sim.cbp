@@ -34,34 +34,50 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add option="-DDEF_UNITTEST" />
+			<Add option="-DDEF_SIM" />
 			<Add directory="FreeRTOS/portable" />
 			<Add directory="FreeRTOS-Plus-CLI" />
-			<Add directory="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/include" />
+			<Add directory="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include" />
 			<Add directory="../fw/config" />
 			<Add directory="hw_sim" />
 			<Add directory="../fw/src" />
 		</Compiler>
+		<Unit filename="../fw/config/FreeRTOSConfig.h" />
 		<Unit filename="../fw/src/defines.h" />
-		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/croutine.c">
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/croutine.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/event_groups.c">
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/event_groups.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/list.c">
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/FreeRTOS.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/StackMacros.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/croutine.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/event_groups.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/list.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/message_buffer.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/mpu_wrappers.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/portable.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/projdefs.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/queue.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/semphr.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/stack_macros.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/stream_buffer.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/task.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/include/timers.h" />
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/list.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/queue.c">
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/queue.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/stream_buffer.c">
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/stream_buffer.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/tasks.c">
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/tasks.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../fw/thirdparty/FreeRTOS/FreeRTOSV10.0.0/Source/timers.c">
+		<Unit filename="../fw/thirdparty/RTOS/freertos/FreeRTOSV10.0.0/Source/timers.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="FreeRTOS-Plus-CLI/FreeRTOS_CLI.c">
