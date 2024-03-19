@@ -61,7 +61,7 @@ void vUDPCommandInterpreterTask( void *pvParameters )
 {
   long lBytes, lByte;
   signed char cInChar, cInputIndex = 0;
-  static signed char cInputString[ cmdMAX_INPUT_SIZE ], cOutputString[ cmdMAX_OUTPUT_SIZE ], cLocalBuffer[ cmdSOCKET_INPUT_BUFFER_SIZE ];
+  static char cInputString[ cmdMAX_INPUT_SIZE ], cOutputString[ cmdMAX_OUTPUT_SIZE ], cLocalBuffer[ cmdSOCKET_INPUT_BUFFER_SIZE ];
   BaseType_t xMoreDataToFollow;
   volatile int iErrorCode = 0;
   struct sockaddr_in xClient;
