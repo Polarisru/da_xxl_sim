@@ -55,6 +55,21 @@ void resetPipeInstance(PipeInstance *instance) {
     instance->overlapped.hEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
 }
 
+void writeToPipeInstance(PipeInstance *instance, const char *msg) {
+  if (instance->isConnected) {
+    DWORD bytesWritten;
+    BOOL success;
+    success = WriteFile(instance->pipe, msg, (DWORD)strlen(msg), &bytesWritten, NULL);
+
+    if (!success && GetLastError() == ERROR_BROKEN_PIPE) {
+        //printf("Error writing to client (disconnected): %lu\n", GetLastError());
+        resetPipeInstance(instance);
+    } else {
+        printf("Message sent: %s\n", msg);
+    }
+  }
+}
+
 // Function to handle asynchronous operations on the pipe
 void handlePipeInstance(PipeInstance *instance) {
     if (!instance->isConnected) {
@@ -93,15 +108,16 @@ void handlePipeInstance(PipeInstance *instance) {
 
             // Send a response to the client
             const char *response = "Message received!";
-            DWORD bytesWritten;
-            success = WriteFile(instance->pipe, response, (DWORD)strlen(response), &bytesWritten, NULL);
-
-            if (!success && GetLastError() == ERROR_BROKEN_PIPE) {
-                printf("Error writing to client (disconnected): %lu\n", GetLastError());
-                resetPipeInstance(instance);
-            } else {
-                printf("Response sent.\n");
-            }
+//            DWORD bytesWritten;
+//            success = WriteFile(instance->pipe, response, (DWORD)strlen(response), &bytesWritten, NULL);
+//
+//            if (!success && GetLastError() == ERROR_BROKEN_PIPE) {
+//                printf("Error writing to client (disconnected): %lu\n", GetLastError());
+//                resetPipeInstance(instance);
+//            } else {
+//                printf("Response sent.\n");
+//            }
+            writeToPipeInstance(instance, response);
 
         } else if (GetLastError() == ERROR_BROKEN_PIPE) {
             //printf("Client disconnected during read.\n");
@@ -122,6 +138,7 @@ int main() {
         // Handle pipe instance in a non-blocking way
         handlePipeInstance(&pipe);
         Sleep(50); // Avoid 100% CPU usage in the loop
+        writeToPipeInstance(&pipe, "Tick");
     }
 
     CloseHandle(pipe.pipe);
