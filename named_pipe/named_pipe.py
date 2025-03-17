@@ -18,13 +18,21 @@ def main():
         win32file.WriteFile(pipe, message.encode('utf-8'))
         print(f"Sent to server: {message}")
 
-        # Receive a message from the server
-        result, response = win32file.ReadFile(pipe, 1024)
-        print(f"Received from server: {response.decode('utf-8')}")
+        # Try to read multiple responses
+        while True:
+            try:
+                result, response = win32file.ReadFile(pipe, 1024)
+                print(f"Received from server: {response.decode('utf-8')}")
+            except Exception as e:
+                print(f"Error: {e}")
+                break
 
     except Exception as e:
         print(f"Error: {e}")
+    finally:
+        if 'pipe' in locals():
+            win32file.CloseHandle(pipe)
+            print("Pipe closed.")
 
 if __name__ == "__main__":
     main()
-
