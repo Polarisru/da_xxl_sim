@@ -1,6 +1,5 @@
 import zmq
 import threading
-import time
 
 # Function to handle sending commands to the server
 def command_sender():
@@ -33,14 +32,16 @@ def message_receiver():
     context = zmq.Context()
     sub_socket = context.socket(zmq.SUB)
     sub_socket.connect("tcp://localhost:5556")  # Connect to the PUB socket of the server
-    sub_socket.setsockopt_string(zmq.SUBSCRIBE, "")  # Subscribe to all messages
 
-    print("Listening for periodic data from the server...")
+    # Subscribe to specific messages
+    sub_socket.setsockopt_string(zmq.SUBSCRIBE, "Data 0")  # Subscribe to messages with prefix "Data 0"
+
+    print("Listening for specific data from the server...")
 
     while True:
         # Receive a message from the server
         message = sub_socket.recv_string()
-        print(f"Received periodic data: {message}")
+        print(f"Received specific data: {message}")
 
     # Clean up (this won't be reached in this example)
     sub_socket.close()
