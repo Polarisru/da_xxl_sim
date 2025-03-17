@@ -51,8 +51,27 @@ void resetPipeInstance(PipeInstance *instance) {
 
     instance->isConnected = false;
     CloseHandle(instance->overlapped.hEvent);
+    CloseHandle(instance->pipe);  // Close the existing pipe handle
+
+    // Recreate the pipe instance
+    instance->pipe = CreateNamedPipe(
+        PIPE_NAME,
+        PIPE_ACCESS_DUPLEX | FILE_FLAG_OVERLAPPED,
+        PIPE_TYPE_MESSAGE | PIPE_READMODE_MESSAGE | PIPE_WAIT,
+        PIPE_UNLIMITED_INSTANCES, BUFFER_SIZE, BUFFER_SIZE, 0, NULL
+    );
+
+    if (instance->pipe == INVALID_HANDLE_VALUE) {
+        printf("Failed to recreate named pipe. Error: %lu\n", GetLastError());
+        exit(1);
+    }
+
     ZeroMemory(&instance->overlapped, sizeof(OVERLAPPED));
     instance->overlapped.hEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
+    if (instance->overlapped.hEvent == NULL) {
+        printf("Failed to recreate event. Error: %lu\n", GetLastError());
+        exit(1);
+    }
 }
 
 void writeToPipeInstance(PipeInstance *instance, const char *msg) {
